@@ -8,3 +8,269 @@ paragraph yellow: #ECB12F
 links blue: #2E71A6
 footer links grey: #454245
 */
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+body {
+    margin: 0;
+}
+nav, header {
+    background-color: #540B51;
+    margin: 0;
+    color: white;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    align-items: center;
+    width: 100vw;
+    box-sizing: border-box;
+}
+nav > div {
+    height: 25px;
+}
+.nav-logo {
+    height: 25px;
+}
+#nav-menue > li{
+    display: none;
+}
+.nav-button {
+    background-color: transparent;
+    border: none;
+}
+header {
+    padding-top: 70px;
+}
+#header-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.header-container-center-padding {
+    display: inline-block;
+    padding: 10px;
+}
+h1 {
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-top: 0;
+}
+.subheadline-yellow {
+    color: #ECB12F;
+    font-weight: bolder;
+}
+
+.sign-up-buttons {
+    display: block;
+}
+#subheadline {
+    padding-bottom: 20px; 
+}
+.button-shape {
+    height: 45px;
+    border-radius: 4px;
+    border: none;
+    width: 90vw;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+#email-button {
+    color: #540B51;
+}
+#google-button {
+    color: white;
+    background-color: #4285F4;
+    display: inline-flex;
+    justify-content:flex-start;
+    gap: 0 20%;
+    align-items: center;
+}
+.google-logo {
+    width: 25px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 2px;
+}
+.hero-teaser {
+    width: 100vw;
+}
+
+main {
+    color: black;
+    margin: 0;
+}
+section {
+    background-color: #F3EAE2;
+    padding: 30px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.order-image-first {
+    flex-direction: column-reverse;
+}
+#trust-section{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; 
+}
+#trust-section > p {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+#trust-logo-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 25px;
+    gap: 20px;
+}
+.trust-logos-text {
+    height: 30px;
+}
+.trust-logos {
+    height: 40px;
+}
+.main-img {
+    width: 90vw;
+}
+.align-right {
+    align-self: flex-end;
+}
+article > h2 {
+    line-height: 2rem;
+    color: #191817;
+}
+article > p {
+    line-height: 1.5rem;
+}
+article > a {
+    color: #2E71A6;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+article {
+    padding: 15px;
+}
+
+#kpi-section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#kpi-section > h3 {
+    font-size: 1.5rem;
+    padding: 20px 50px 0 50px;
+    color: #191817;
+}
+#enterprice-button {
+    color: white;
+    background-color: #540B51;
+}
+#sales-button {
+    color: #540B51;
+    background-color: white;
+    border: 2px solid #540B51;
+}
+#kpi-section ul {
+    padding: 30px 0 0 0;
+}
+#kpi-section li {
+    padding: 0 100px;
+}
+.kpi {
+    color: #540B51;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.kpi-description {
+    font-size: 00.8rem;
+    font-weight: 600;
+}
+#elipse-section {
+    background-color: #540B51;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0 0 70% 70%;
+    padding-bottom: 60px;
+    margin: 0 -20%;
+    color: white;
+}
+#elipse-section > h3 {
+    font-size: 1.5rem;
+    padding: 0 120px;
+}
+#elipse-section > div {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+#sales-button2 {
+    color: white;
+    background-color: #540B51;
+    border: 2px solid white;
+}
+#trial-button {
+    color: #540B51;
+    background-color: white;
+}
+footer {
+    line-height: 2rem;
+    margin: 20px;
+    padding-top: 40px;
+}
+.footer-logo {
+    width: 50PX;
+}
+#footer-table {
+    display: flex;
+    justify-content: center;
+}
+#footer-table li {
+    font-size: 0.7rem;
+    color: #454245;
+    box-sizing: border-box;
+}
+#footer-table ul {
+    padding: 20px;
+}
+.footer-table-headline {
+    font-weight: bold;
+    color: #191817
+}
+#social-media-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+#footer-links {
+    font-weight: bold;
+    font-size: 0.7rem;
+    padding: 20px 0 0 0;
+}
+#company-info {
+    color: #454245;
+    font-size: 0.7rem;
+    line-height: 1rem;
+}
+.icon-padding-right {
+    padding-right: 10px;
+}
+.color-blue {
+    color: #2E71A6;
+}
