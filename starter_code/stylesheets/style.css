@@ -15,20 +15,22 @@ html {
 }
 body {
     margin: 0;
+    height: fit-content;
 }
 nav, header {
     background-color: #540B51;
     margin: 0;
     color: white;
 }
-nav {
+nav {  
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    position: fixed;
     align-items: center;
-    width: 100vw;
     box-sizing: border-box;
+    width: 100vw;
+    position: fixed;
+    top: 0;
 }
 nav > div {
     height: 25px;
@@ -45,6 +47,11 @@ nav > div {
 }
 header {
     padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
 }
 #header-container {
     display:flex;
@@ -81,6 +88,9 @@ h1 {
     margin: 5px 0;
     text-transform: uppercase;
 }
+.button-width-header {
+    max-width: 450px;
+}
 #email-button {
     color: #540B51;
 }
@@ -99,7 +109,7 @@ h1 {
     border-radius: 2px;
 }
 .hero-teaser {
-    width: 100vw;
+    width: 90vw;
 }
 
 main {
@@ -188,6 +198,9 @@ article {
 #kpi-section li {
     padding: 0 100px;
 }
+/* #kpi-section p {
+    padding: 0 10px;
+} */
 .kpi {
     color: #540B51;
     font-size: 2.5rem;
@@ -198,15 +211,24 @@ article {
     font-weight: 600;
 }
 #elipse-section {
-    background-color: #540B51;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border-radius: 0 0 70% 70%;
+    position:relative;
     padding-bottom: 60px;
-    margin: 0 -20%;
     color: white;
+    background-color: transparent;
+}
+#elipse-layout {
+    position: absolute;
+    background-color: #540B51;
+    border-radius: 0 0 70% 70%;
+    height: 200px;
+    width: 100vw;
+    transform:scale(2);
+    z-index: -1;
+    overflow: hidden;
 }
 #elipse-section > h3 {
     font-size: 1.5rem;
@@ -260,8 +282,8 @@ li {
 }
 #footer-links {
     font-weight: bold;
-    font-size: 0.7rem;
-    padding: 20px 0 0 0;
+    font-size: 0.9rem;
+    padding: 0;
 }
 #company-info {
     color: #454245;
@@ -273,4 +295,132 @@ li {
 }
 .color-blue {
     color: #2E71A6;
+}
+.img-desctop {
+    display: none;
+}
+
+ @media (min-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row;
+    }
+    #header-container {
+        background-image: url(/./starter_code/images/background-singup.png);
+        background-size: 1200px;
+        background-repeat: no-repeat;
+        padding: 20px 20px 100px 20px;
+    }
+    h1 {
+        font-size: 4.7rem;
+        text-align: left;
+        font-weight: 600;
+        padding-top: 40px;
+        padding-right: 100px;
+    }
+    #subheadline {
+        text-align: left;
+        font-size: 1.6rem;
+    }
+    .hero-teaser {
+        display: none;
+    }
+    #hero-teaser-container {
+        width: 100vw;
+        height: 500px;
+        background-image: url(/./starter_code/images/hero-product-ui.png);
+        background-size: 500px;
+        background-repeat: no-repeat;
+    }
+
+    article {
+        padding: 20px 150px;
+    }
+    article > h2,
+    #kpi-section > h3 {
+        font-size: 2rem;
+    }
+    article > p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+    article > a {
+        font-size: 1rem;
+    }
+    .button-shape {
+        height: 50px;
+    }
+
+    #kpi-button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 90px;
+    }
+    #kpi-section > h3 {
+        padding: 0;
+        margin: 0;
+    }
+    .kpi {
+        font-size: 3rem;
+    }
+    .kpi-description {
+        font-size: 1rem;
+    }
+    #enterprice-button {
+        width: 40vw;
+    }
+    #sales-button {
+        width: 20vw;
+    }
+    #kpi-section ul {
+        display:flex;
+    }
+    #kpi-section li {
+        padding: 0 50px;
+        text-align: left;
+    }
+    #elipse-section > div {
+        flex-direction: column;
+    }
+    #trial-button-container {
+        padding: 0 90px;
+    }
+
+
+    #footer-table {
+        justify-content: space-between;
+    }
+    #footer-links {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.7rem;
+    }
+    #footer-table ul {
+        padding: 0;
+    }
+    #footer-table li {
+        font-size: 00.9rem;
+        line-height: 2.5rem;
+    }
+    #social-media-nav {
+        display: flex;
+        justify-content: flex-start;
+        gap: 60px;
+    }
+    .fab {
+        font-size: 1.2rem;
+    }
+ 
+    #company-info {
+    font-size: 0.9rem;
+    padding: 20px 0;
+    }
+    
+    .img-mobile {
+        display: none;
+    }
+    .img-desctop {
+        display: block;
+    }
 }
