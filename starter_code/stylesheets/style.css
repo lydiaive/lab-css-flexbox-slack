@@ -8,7 +8,9 @@ paragraph yellow: #ECB12F
 links blue: #2E71A6
 footer links grey: #454245
 */
-
+.hidden {
+    display: none;
+}
 html {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -31,6 +33,7 @@ nav {
     width: 100vw;
     position: fixed;
     top: 0;
+    z-index: 100;
 }
 nav > div {
     height: 25px;
@@ -89,7 +92,7 @@ h1 {
     text-transform: uppercase;
 }
 .button-width-header {
-    max-width: 450px;
+    max-width: 500px;
 }
 #email-button {
     color: #540B51;
@@ -108,8 +111,15 @@ h1 {
     padding: 5px;
     border-radius: 2px;
 }
+#hero-teaser-container {
+        width: 100vw;
+        height: 300px;
+        background-image: url(/./starter_code/images/hero-product-ui.png);
+        background-size: 600px;
+        background-repeat: no-repeat;
+}
 .hero-teaser {
-    width: 90vw;
+    display: none;
 }
 
 main {
@@ -198,9 +208,7 @@ article {
 #kpi-section li {
     padding: 0 100px;
 }
-/* #kpi-section p {
-    padding: 0 10px;
-} */
+
 .kpi {
     color: #540B51;
     font-size: 2.5rem;
@@ -228,11 +236,11 @@ article {
     width: 100vw;
     transform:scale(2);
     z-index: -1;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 #elipse-section > h3 {
     font-size: 1.5rem;
-    padding: 0 120px;
+    margin: 15px 40px;
 }
 #elipse-section > div {
     display: flex;
@@ -274,7 +282,7 @@ footer {
 }
 #social-media-nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0;
 }
 li {
@@ -282,13 +290,15 @@ li {
 }
 #footer-links {
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+    line-height: 2.5rem;
     padding: 0;
 }
 #company-info {
     color: #454245;
     font-size: 0.7rem;
     line-height: 1rem;
+    padding: 15px 0;
 }
 .icon-padding-right {
     padding-right: 10px;
@@ -300,16 +310,26 @@ li {
     display: none;
 }
 
+@media (max-width: 1023px) and (min-width: 768px) {
+    .nav-logo-div {
+        flex-basis: 90%
+    }
+}
  @media (min-width: 768px) {
+    nav {
+        padding: 20px 30px;
+    }
     header {
         display: flex;
         flex-direction: row;
+        text-align: left;
     }
     #header-container {
         background-image: url(/./starter_code/images/background-singup.png);
         background-size: 1200px;
         background-repeat: no-repeat;
-        padding: 20px 20px 100px 20px;
+        padding: 20px 20px 150px 20px;
+        text-align: left;
     }
     h1 {
         font-size: 4.7rem;
@@ -350,6 +370,9 @@ li {
     .button-shape {
         height: 50px;
     }
+    .button-width-elipse {
+        width: 600px;
+    }
 
     #kpi-button-container {
         display: flex;
@@ -383,9 +406,9 @@ li {
     #elipse-section > div {
         flex-direction: column;
     }
-    #trial-button-container {
-        padding: 0 90px;
-    }
+   /*  #trial-button-container {
+        padding:  90px;
+    } */
 
 
     #footer-table {
@@ -422,5 +445,87 @@ li {
     }
     .img-desctop {
         display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    #nav-menue > li{
+        display: block;
+    }
+    #nav-menue {
+        display: flex;
+        justify-content: space-around;
+        flex-grow: 2;
+    }
+    #nav-menue a {
+        color: white;
+        text-decoration: none;
+    }
+    #menue-button {
+        display: none;
+    }
+    .hidden {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+    }
+    .hidden a {
+        color: white;
+        text-decoration: none;
+    }
+    #try-button {
+        background-color: white;
+        height: 45px;
+        border-radius: 4px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px; 
+        
+    }
+    #try-button > a {
+        color: #540B51;
+        text-transform: uppercase;
+    }
+    .line-parallel {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .main-img {
+        width: 100%;
+    }
+    .align-center {
+        display: flex;
+        align-items: center;
+    }
+    article {
+        padding: 20px 80px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .button-width-header {
+        width: 300px;
+    }
+    #sign-up-buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+    header {
+        position: relative;
+    }
+    #hero-teaser-container {
+        background-position: 50%;
+    }
+    #nav-menue {
+        display: flex;
+        justify-content: flex-start;
+        gap: 50px; 
     }
 }
